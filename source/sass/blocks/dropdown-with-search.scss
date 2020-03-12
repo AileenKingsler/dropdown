@@ -1,0 +1,126 @@
+.dropdown-with-search {
+  max-width: 280px;
+  position: relative;
+
+  &_min-width {
+    min-width: 280px;
+  }
+
+  &__header {
+    background-color: #ebebeb;
+    padding: 9px 35px 10px 15px;
+    display: flex;
+    border-radius: 4px;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 19px;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+
+    &-label {
+      font-weight: 500;
+      margin-right: 5px;
+    }
+
+    &_fade::after {
+      content: "";
+      width: 60px;
+      display: inline-flex;
+      background-image: linear-gradient(to right, rgba(235, 235, 235, 0) 0%, rgba(235, 235, 235, 1) 50%, rgba(235, 235, 235, 1) 100%);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    &_fade:hover::after {
+      background-image: linear-gradient(to right, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 1) 50%, rgba(245, 245, 245, 1) 100%);
+    }
+  }
+
+  &__content {
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 99;
+    top: 50px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: none;
+
+    &_open {
+      display: block;
+    }
+
+    &-search {
+      border-bottom: 1px solid #e8e8e8;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-size: 14px;
+
+      &-icon {
+        margin-right: 10px;
+        color: #717171;
+        font-size: 18px;
+        position: relative;
+        top: -1px;
+      }
+
+      &-input {
+        border: none;
+        min-width: 150px;
+        flex: 1;
+      }
+    }
+
+    &-items {
+      margin: 15px 0;
+      max-height: 195px;
+      overflow: auto;
+    }
+
+    &-item {
+      padding: 0 20px;
+      color: #343434;
+      display: flex;
+      align-items: flex-start;
+      overflow: hidden;
+
+      &-icon {
+        margin-right: 8px;
+        margin-top: 2px;
+      }
+
+      &-counter {
+        margin-left: 5px;
+      }
+    }
+
+    &-item + &-item {
+      margin-top: 15px;
+    }
+  }
+}
+
+a.dropdown-with-search__header-action {
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+  color: #333333;
+
+  .fa-times:hover {
+    opacity: 0.6;
+  }
+}
+
+.dropdown-with-search_with-selected .dropdown-with-search__header-action {
+  color: #2785e2;
+}

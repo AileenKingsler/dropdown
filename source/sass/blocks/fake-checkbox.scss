@@ -1,0 +1,130 @@
+.fake-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: normal;
+  max-width: 100%;
+
+  &:not(.fake-checkbox_ignore-disabled-style) input[type="checkbox"]:disabled ~ span:not([class])::before {
+    opacity: 0.5;
+    background: #e9e7e7;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:disabled ~ span:not([class]),
+    &[readonly] ~ span:not([class]) {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    & ~ span:not([class])::before {
+      content: "";
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      margin-top: -9px;
+      transition: 0.25s;
+    }
+
+    &:checked ~ span:not([class])::after {
+      content: "";
+      left: 4px;
+      position: absolute;
+      z-index: 2;
+      width: 8px;
+      height: 8px;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'/%3E%3C/svg%3E");
+    }
+
+    &:checked ~ span:not([class])::before {
+      background-color: #2785e2;
+      border-color: #005ead;
+    }
+  }
+
+  &_align-top {
+    align-items: flex-start;
+
+    input[type="checkbox"] {
+      & ~ span:not([class])::before {
+        top: initial;
+        margin-top: 2px;
+      }
+
+      &:checked + span:not([class])::after {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  &:hover input[type="checkbox"]:not(:checked) ~ span:not([class])::before {
+    background-color: #e4f0fc;
+  }
+
+  &:hover input[type="checkbox"]:not(:disabled) ~ span:not([class])::before {
+    border-color: #005ead;
+  }
+
+  img {
+    margin-right: 5px;
+    width: 26px;
+    position: relative;
+    top: -1px;
+  }
+
+  &_circle input[type="checkbox"] ~ span:not([class])::before {
+    border-radius: 50%;
+  }
+
+  &_checkbox-column {
+    padding-left: 17px;
+
+    input[type="checkbox"]:checked ~ span:not([class])::after {
+      margin-left: -5px;
+      top: 50%;
+      left: 50%;
+    }
+
+    input[type="checkbox"] ~ span:not([class])::after {
+      left: 4px;
+      margin-left: 0;
+      margin-top: -11px;
+    }
+  }
+
+  &_text-sm {
+    font-size: 12px;
+  }
+
+  &_inline {
+    display: inline-flex;
+  }
+
+  .saved-filter-subscribe-icon {
+    margin-right: 5px;
+    position: relative;
+    top: -1px;
+  }
+
+  .icon-info {
+    position: relative;
+    top: -1px;
+  }
+
+  .tooltips {
+    margin-left: 5px;
+  }
+}
