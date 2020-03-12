@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-auto mt-4">
+        <div class="dropdown-with-search dropdown-with-search_min-width">
+          <div class="dropdown-with-search__header">
+            <div class="dropdown-with-search__header-label">Все проекты:</div>
+            <div class="dropdown-with-search__header-value">Выберите проект</div>
+            <a class="dropdown-with-search__header-action"><i class="fa-fw fas fa-plus"></i></a>
+          </div>
+          <div class="dropdown-with-search__content">
+            <label class="dropdown-with-search__content-search">
+              <i class="fas fa-search dropdown-with-search__content-search-icon"></i>
+              <input type="text" class="dropdown-with-search__content-search-input" placeholder="Поиск по названию">
+            </label>
+            <div class="dropdown-with-search__content-items">
+              <div class="dropdown-with-search__content-item">
+                <label class="fake-checkbox fake-checkbox_align-top">
+                  <input type="checkbox" name="filter[projects][]">
+                  <span></span>
+                  <span class="text text_ellipsis">Andromeda</span>
+                </label>
+              </div>
+              <div class="dropdown-with-search__content-item">
+                <label class="fake-checkbox fake-checkbox_align-top">
+                  <input type="checkbox" name="filter[projects][]">
+                  <span></span>
+                  <span class="text text_ellipsis">Eternity</span>
+                </label>
+              </div>
+              <div class="dropdown-with-search__content-item">
+                <label class="fake-checkbox fake-checkbox_align-top">
+                  <input type="checkbox" name="filter[projects][]">
+                  <span></span>
+                  <span class="text text_ellipsis">Valencia</span>
+                </label>
+              </div>
+              <div class="dropdown-with-search__content-item">
+                <label class="fake-checkbox fake-checkbox_align-top">
+                  <input type="checkbox" name="filter[projects][]">
+                  <span></span>
+                  <span class="text text_ellipsis">Argentina</span>
+                </label>
+              </div>
+              <div class="dropdown-with-search__content-item">
+                <label class="fake-checkbox fake-checkbox_align-top">
+                  <input type="checkbox" name="filter[projects][]">
+                  <span></span>
+                  <span class="text text_ellipsis">San marco</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.dropdown-with-search__header').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.currentTarget.nextElementSibling.classList.toggle('dropdown-with-search__content_open');
+      });
+    });
+  </script>
+</body>
+</html>
