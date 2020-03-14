@@ -6,7 +6,6 @@
   margin-bottom: 0;
   cursor: pointer;
   font-size: 14px;
-  line-height: normal;
   max-width: 100%;
 
   &:not(.fake-checkbox_ignore-disabled-style) input[type="checkbox"]:disabled ~ span:not([class])::before {
