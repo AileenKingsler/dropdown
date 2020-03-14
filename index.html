@@ -112,6 +112,45 @@
       </div>
 
     </div>
+    <div>
+      <span>Showing</span>
+      <span class="dropdown">
+        <a class="btn btn-link p-0 align-baseline" href="#" data-toggle="dropdown">task board </a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-input px-3 py-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Andromeda</label>
+            </div>
+          </li>
+          <li class="dropdown-input px-3 py-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck2">
+              <label class="custom-control-label" for="customCheck2">Eternity</label>
+            </div>
+          </li>
+          <li class="dropdown-input px-3 py-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck3">
+              <label class="custom-control-label" for="customCheck3">Valencia</label>
+            </div>
+          </li>
+          <li class="dropdown-input px-3 py-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck4">
+              <label class="custom-control-label" for="customCheck4">Argentina</label>
+            </div>
+          </li>
+          <li class="dropdown-input px-3 py-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck5">
+              <label class="custom-control-label" for="customCheck5">San marco</label>
+            </div>
+          </li>
+        </ul>
+      </span>
+      <span>of 4 issues</span>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -125,7 +164,7 @@
 
     $('.selectpicker').selectpicker();
 
-    $('.dropdown-input').click(function(evt){
+    $('.dropdown-input').on('click', function (evt) {
       evt.stopPropagation();
     });
   </script>
