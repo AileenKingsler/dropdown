@@ -69,7 +69,7 @@
           <ul class="dropdown-menu w-100 mt-1">
             <li class="dropdown-input px-3 py-1">
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
                 <label class="custom-control-label" for="customCheck1">Andromeda</label>
               </div>
             </li>
@@ -112,14 +112,39 @@
       </div>
 
     </div>
+
     <div>
-      <span>Showing</span>
-      <span class="dropdown">
-        <a class="btn btn-link p-0 align-baseline" href="#" data-toggle="dropdown">task board </a>
+      <span>You can use Bootstrap 4 custom form elements:</span>
+      <form class="dropdown d-inline-block">
+        <a href="#" data-toggle="dropdown">radios</a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-input px-3 py-1">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Andromeda</label>
+            </div>
+          </li>
+          <li class="dropdown-input px-3 py-1">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Eternity</label>
+            </div>
+          </li>
+          <li class="dropdown-input px-3 py-1">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio3">Valencia</label>
+            </div>
+          </li>
+        </ul>
+      </form>
+      <span>or</span>
+      <form class="dropdown d-inline-block">
+        <a href="#" data-toggle="dropdown">checkboxes</a>
         <ul class="dropdown-menu">
           <li class="dropdown-input px-3 py-1">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck6">
+              <input type="checkbox" class="custom-control-input" id="customCheck6" checked>
               <label class="custom-control-label" for="customCheck6">Andromeda</label>
             </div>
           </li>
@@ -135,22 +160,10 @@
               <label class="custom-control-label" for="customCheck8">Valencia</label>
             </div>
           </li>
-          <li class="dropdown-input px-3 py-1">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck9">
-              <label class="custom-control-label" for="customCheck9">Argentina</label>
-            </div>
-          </li>
-          <li class="dropdown-input px-3 py-1">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck10">
-              <label class="custom-control-label" for="customCheck10">San marco</label>
-            </div>
-          </li>
         </ul>
-      </span>
-      <span>of 4 issues</span>
+      </form>
     </div>
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
