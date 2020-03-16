@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    .dropdown-inline-block {
+      display: inline-block;
+    }
+
+    a[data-toggle="dropdown"]:not([href]) {
+      cursor: pointer;
+    }
+
+    .dropdown-header {
+      font-size: 14px;
+      padding: 3px 16px;
+    }
+
+    .dropdown-menu .divider {
+      margin: 5px 0;
+    }
+
+    .dropdown-menu-item {
+      padding: 3px 16px;
+    }
+
+    .dropdown-menu-item label {
+      margin-bottom: 0;
+      font-weight: normal;
+    }
+
+    .dropdown-menu-item .btn-sm {
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container" style="padding-top: 24px;">
+
+    <span>You can use Bootstrap 3</span>
+    <form class="dropdown dropdown-inline-block">
+      <a data-toggle="dropdown">radios</a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-header">Radios</li>
+        <li class="divider"></li>
+        <li class="dropdown-menu-item">
+          <input type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label for="exampleRadios1">Andromeda</label>
+        </li>
+        <li class="dropdown-menu-item">
+          <input type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label for="exampleRadios2">Eternity</label>
+        </li>
+        <li class="dropdown-menu-item">
+          <input type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+          <label for="exampleRadios3">Valencia</label>
+        </li>
+      </ul>
+    </form>
+    <span>or</span>
+    <form class="dropdown dropdown-inline-block">
+      <a data-toggle="dropdown">checkboxes</a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-header">Checkboxes</li>
+        <li class="divider"></li>
+        <li class="dropdown-menu-item">
+          <input type="checkbox" id="defaultCheck1" checked>
+          <label for="defaultCheck1">Andromeda</label>
+        </li>
+        <li class="dropdown-menu-item">
+          <input type="checkbox" id="defaultCheck2">
+          <label for="defaultCheck2">Eternity</label>
+        </li>
+        <li class="dropdown-menu-item">
+          <input type="checkbox" id="defaultCheck3">
+          <label for="defaultCheck3">Valencia</label>
+        </li>
+        <li class="divider"></li>
+        <li class="dropdown-menu-item">
+          <button class="btn btn-success btn-sm" type="submit">Apply filter</button>
+        </li>
+      </ul>
+    </form>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+    $('.dropdown-menu-item').on('click', function (evt) {
+      evt.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
